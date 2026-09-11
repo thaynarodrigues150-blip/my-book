@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TelaX</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="telaLogin" class="tela">
+
+        
+        <header class="logo">
+            <span class="play">▶</span>
+            <span class="telaTexto">Tela</span><span class="x">X</span>
+        </header>
+
+
+        
+        <main class="login-container">
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="digite seu email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="digite sua senha..."
+                    required
+                >
+
+                <a href="#" class="esqueci">
+                    esqueceu sua senha?
+                </a>
+
+                <div class="linha"></div>
+
+                <button
+                    type="submit"
+                    class="entrar-button"
+                >
+                    ENTRAR
+                </button>
+
+                <button
+                    type="button"
+                    class="google-button"
+                    id="googleButton"
+                >
+                    <span class="google-icon">G</span>
+
+                    <span>entrar com o google</span>
+                </button>
+
+            </form>
+
+        </main>
+
+    </section>
+
+
+    <section id="telaUsuarios" class="tela usuarios-tela">
+
+        
+        <header class="logo logo-usuarios">
+            <span class="play">▶</span>
+            <span class="telaTexto">Tela</span><span class="x">X</span>
+        </header>
+
+
+        
+        <main class="usuarios">
+
+          
+            <div
+                class="usuario"
+                id="usuario"
+            >
+
+                <div class="icone-usuario">
+
+                    <div class="cabeca"></div>
+
+                    <div class="corpo"></div>
+
+                </div>
+
+                <p>nome de usuario</p>
+
+            </div>
+
+
+            
+            <button
+                class="adicionar"
+                id="adicionarUsuario"
+            >
+                <span>+</span>
+            </button>
+
+        </main>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+
+
+    <section id="telaInicio" class="tela inicio-tela">
+
+     
+        <button class="botao-usuario" id="botaoUsuario">
+            <span class="mini-cabeca"></span>
+            <span class="mini-corpo"></span>
+        </button>
+    
+    
+       
+        <div class="pesquisa">
+    
+            <input
+                type="text"
+                id="campoPesquisa"
+            >
+    
+            <button id="botaoPesquisa">
+                🔍
+            </button>
+    
+        </div>
+    
+    
+    
+        <button
+            class="hamburguer"
+            id="hamburguer"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    
+    
+        
+             ÁREA DOS FILMES
+        
+    
+        <main class="filmes">
+    
+          
+    
+            <div class="fileira">
+    
+                <button class="seta esquerda">
+                    ‹
+                </button>
+    
+    
+                <div class="filmes-container">
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                </div>
+    
+    
+                <button class="seta direita">
+                    ›
+                </button>
+    
+            </div>
+    
+    
+            <div class="fileira segunda-fileira">
+    
+                <button class="seta esquerda">
+                    ‹
+                </button>
+    
+    
+                <div class="filmes-container">
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                    <div class="filme">
+                        <img src="img/filme1.jpg" alt="Filme">
+                    </div>
+    
+                </div>
+    
+    
+                <button class="seta direita">
+                    ›
+                </button>
+    
+            </div>
+    
+        </main>
+    
+    
+        
+             MENU LATERAL
+        
+    
+        <aside
+            class="menu-lateral"
+            id="menuLateral"
+        >
+    
+            <button class="menu-item">
+                Terror
+            </button>
+    
+            <button class="menu-item">
+                Romance
+            </button>
+    
+            <button class="menu-item">
+                Ação
+            </button>
+    
+            <button class="menu-item">
+                Suspense
+            </button>
+    
+            <button class="menu-item">
+                Lista de desejos
+            </button>
+    
+            <button class="menu-item">
+                Opinião sobre
+            </button>
+    
+            <button class="menu-item">
+                Configurações
+            </button>
+    
+        </aside>
+   
+
+<section id="telaParte4" class="tela parte4-tela">
+
+    <button class="botao-usuario parte4-usuario" id="botaoUsuario4">
+        <span class="mini-cabeca"></span>
+        <span class="mini-corpo"></span>
+    </button>
+
+
+   
+    <div class="pesquisa parte4-pesquisa">
+
+        <input
+            type="text"
+            id="campoPesquisa4"
+        >
+
+        <button id="botaoPesquisa4">
+            🔍
+        </button>
+
+    </div>
+
+
+    <button
+        class="hamburguer parte4-hamburguer"
+        id="hamburguer4"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+   
+
+    <main class="filmes parte4-filmes">
+
+       
+
+        <div class="fileira">
+
+            <button class="seta esquerda">
+                ‹
+            </button>
+
+
+            <div class="filmes-container">
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+            </div>
+
+
+            <button class="seta direita">
+                ›
+            </button>
+
+        </div>
+
+
+
+        <div class="fileira segunda-fileira">
+
+            <button class="seta esquerda">
+                ‹
+            </button>
+
+
+            <div class="filmes-container">
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+                <div class="filme">
+                    <img src="img/getout.jpg" alt="Get Out">
+                </div>
+
+            </div>
+
+
+            <button class="seta direita">
+                ›
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+    <aside
+        class="menu-lateral"
+        id="menuLateral4"
+    >
+
+        <button class="menu-item">
+            Terror
+        </button>
+
+        <button class="menu-item">
+            Romance
+        </button>
+
+        <button class="menu-item">
+            Ação
+        </button>
+
+        <button class="menu-item">
+            Suspense
+        </button>
+
+        <button class="menu-item">
+            Lista de desejos
+        </button>
+
+        <button class="menu-item">
+            Opinião sobre
+        </button>
+
+        <button class="menu-item">
+            Configurações
+        </button>
+
+    </aside>
+
+</section>
+    </section>
+   
+
+<section id="telaParte5" class="tela parte5-tela">
+
+
+    <button
+        class="botao-usuario parte5-usuario"
+        id="botaoUsuario5"
+    >
+        <span class="mini-cabeca"></span>
+        <span class="mini-corpo"></span>
+    </button>
+
+
+   
+
+    <div class="pesquisa parte5-pesquisa">
+
+        <input
+            type="text"
+            id="campoPesquisa5"
+        >
+
+        <button id="botaoPesquisa5">
+            🔍
+        </button>
+
+    </div>
+
+
+   
+
+    <button
+        class="hamburguer parte5-hamburguer"
+        id="hamburguer5"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+
+ 
+
+    <main class="filmes parte5-filmes">
+
+
+      
+
+        <div class="fileira">
+
+            <button class="seta esquerda">
+                ‹
+            </button>
+
+
+            <div class="filmes-container">
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+            </div>
+
+
+            <button class="seta direita">
+                ›
+            </button>
+
+        </div>
+
+
+       
+
+        <div class="fileira segunda-fileira">
+
+            <button class="seta esquerda">
+                ‹
+            </button>
+
+
+            <div class="filmes-container">
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+                <div class="filme">
+                    <img
+                        src="img/mazerunner.jpg"
+                        alt="Maze Runner"
+                    >
+                </div>
+
+            </div>
+
+
+            <button class="seta direita">
+                ›
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+    <aside
+        class="menu-lateral parte5-menu"
+        id="menuLateral5"
+    >
+
+        <button class="menu-item">
+            Terror
+        </button>
+
+        <button class="menu-item">
+            Romance
+        </button>
+
+        <button class="menu-item">
+            Ação
+        </button>
+
+        <button class="menu-item">
+            Suspense
+        </button>
+
+        <button class="menu-item">
+            Lista de desejos
+        </button>
+
+        <button class="menu-item">
+            Opinião sobre
+        </button>
+
+        <button class="menu-item">
+            Configurações
+        </button>
+
+    </aside>
+
+</section>
+</body>
+
+</html>
