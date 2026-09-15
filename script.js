@@ -1,96 +1,82 @@
-// ==========================================
-// TELAX - JAVASCRIPT
-// PARTES 1, 2, 3, 4 E 5
-// ==========================================
-
-
-// ==========================================
-// PEGANDO AS TELAS
-// ==========================================
 
 const telaLogin = document.getElementById("telaLogin");
 const telaUsuarios = document.getElementById("telaUsuarios");
 const telaInicio = document.getElementById("telaInicio");
 const telaParte4 = document.getElementById("telaParte4");
 const telaParte5 = document.getElementById("telaParte5");
+const telaOpiniao = document.getElementById("telaOpiniao");
 
 
-// ==========================================
-// PARTE 1 - LOGIN
-// ==========================================
 
 const loginForm = document.getElementById("loginForm");
 
-loginForm.addEventListener("submit", function(event) {
+if (loginForm) {
 
-    event.preventDefault();
+    loginForm.addEventListener("submit", function(event) {
 
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
+        event.preventDefault();
 
-    if (email === "" || senha === "") {
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
 
-        alert("Preencha todos os campos!");
+        if (email === "" || senha === "") {
 
-        return;
-    }
+            alert("Preencha todos os campos!");
 
-    // Vai para a Parte 2
-    telaLogin.style.display = "none";
-    telaUsuarios.style.display = "block";
+            return;
+        }
 
-});
+        telaLogin.style.display = "none";
+        telaUsuarios.style.display = "block";
 
+    });
 
-// ==========================================
-// PARTE 1 - LOGIN COM GOOGLE
-// ==========================================
-
-const googleButton =
-    document.getElementById("googleButton");
-
-googleButton.addEventListener("click", function() {
-
-    alert("Login com Google");
-
-});
+}
 
 
-// ==========================================
-// PARTE 2 - SELECIONAR USUÁRIO
-// ==========================================
 
-const usuario =
-    document.getElementById("usuario");
+const googleButton = document.getElementById("googleButton");
 
-usuario.addEventListener("click", function() {
+if (googleButton) {
 
-    // Esconde Parte 2
-    telaUsuarios.style.display = "none";
+    googleButton.addEventListener("click", function() {
 
-    // Mostra Parte 3
-    telaInicio.style.display = "block";
+        alert("Login com Google");
 
-});
+    });
+
+}
 
 
-// ==========================================
-// PARTE 2 - ADICIONAR USUÁRIO
-// ==========================================
+const usuario = document.getElementById("usuario");
+
+if (usuario) {
+
+    usuario.addEventListener("click", function() {
+
+        telaUsuarios.style.display = "none";
+
+        telaInicio.style.display = "block";
+
+    });
+
+}
+
+
 
 const adicionarUsuario =
     document.getElementById("adicionarUsuario");
 
-adicionarUsuario.addEventListener("click", function() {
+if (adicionarUsuario) {
 
-    alert("Criar novo usuário!");
+    adicionarUsuario.addEventListener("click", function() {
 
-});
+        alert("Criar novo usuário!");
 
+    });
 
-// ==========================================
-// PARTE 3 - MENU HAMBÚRGUER
-// ==========================================
+}
+
 
 const hamburguer =
     document.getElementById("hamburguer");
@@ -99,24 +85,25 @@ const menuLateral =
     document.getElementById("menuLateral");
 
 
-hamburguer.addEventListener("click", function() {
+if (hamburguer && menuLateral) {
 
-    if (menuLateral.style.display === "block") {
+    hamburguer.addEventListener("click", function() {
 
-        menuLateral.style.display = "none";
+        if (menuLateral.style.display === "block") {
 
-    } else {
+            menuLateral.style.display = "none";
 
-        menuLateral.style.display = "block";
+        } else {
 
-    }
+            menuLateral.style.display = "block";
 
-});
+        }
+
+    });
+
+}
 
 
-// ==========================================
-// PARTE 3 - PESQUISA
-// ==========================================
 
 const campoPesquisa =
     document.getElementById("campoPesquisa");
@@ -125,53 +112,54 @@ const botaoPesquisa =
     document.getElementById("botaoPesquisa");
 
 
-botaoPesquisa.addEventListener("click", function() {
+if (botaoPesquisa && campoPesquisa) {
 
-    const pesquisa =
-        campoPesquisa.value.trim();
+    botaoPesquisa.addEventListener("click", function() {
 
-    if (pesquisa === "") {
+        const pesquisa =
+            campoPesquisa.value.trim();
 
-        alert("Digite o nome de um filme!");
+        if (pesquisa === "") {
 
-    } else {
+            alert("Digite o nome de um filme!");
 
-        alert("Você pesquisou por: " + pesquisa);
+        } else {
 
-    }
+            alert("Você pesquisou por: " + pesquisa);
 
-});
+        }
 
-
-campoPesquisa.addEventListener("keypress", function(event) {
-
-    if (event.key === "Enter") {
-
-        botaoPesquisa.click();
-
-    }
-
-});
+    });
 
 
-// ==========================================
-// PARTE 3 - BOTÃO USUÁRIO
-// ==========================================
+    campoPesquisa.addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+
+            botaoPesquisa.click();
+
+        }
+
+    });
+
+}
+
 
 const botaoUsuario =
     document.getElementById("botaoUsuario");
 
 
-botaoUsuario.addEventListener("click", function() {
+if (botaoUsuario) {
 
-    alert("Perfil do usuário");
+    botaoUsuario.addEventListener("click", function() {
 
-});
+        alert("Perfil do usuário");
+
+    });
+
+}
 
 
-// ==========================================
-// PARTE 3 - FILMES → PARTE 4
-// ==========================================
 
 const filmesParte3 =
     document.querySelectorAll("#telaInicio .filme");
@@ -183,7 +171,9 @@ filmesParte3.forEach(function(filme) {
 
         telaInicio.style.display = "none";
 
-        menuLateral.style.display = "none";
+        if (menuLateral) {
+            menuLateral.style.display = "none";
+        }
 
         telaParte4.style.display = "block";
 
@@ -192,9 +182,6 @@ filmesParte3.forEach(function(filme) {
 });
 
 
-// ==========================================
-// PARTE 3 - SETAS
-// ==========================================
 
 const setasEsquerda =
     document.querySelectorAll("#telaInicio .seta.esquerda");
@@ -229,9 +216,7 @@ setasDireita.forEach(function(seta) {
 });
 
 
-// ==========================================
-// PARTE 3 - ITENS DO MENU
-// ==========================================
+
 
 const itensMenu =
     document.querySelectorAll("#menuLateral .menu-item");
@@ -244,16 +229,28 @@ itensMenu.forEach(function(item) {
         const opcao =
             item.textContent.trim();
 
-        alert("Você selecionou: " + opcao);
+
+        if (
+            opcao.toLowerCase().includes("opinião") ||
+            opcao.toLowerCase().includes("opiniao") ||
+            opcao.toLowerCase().includes("opnião") ||
+            opcao.toLowerCase().includes("opniao")
+        ) {
+
+            abrirTelaOpiniao();
+
+        } else {
+
+            alert("Você selecionou: " + opcao);
+
+        }
 
     });
 
 });
 
 
-// ==========================================
-// PARTE 4 - MENU HAMBÚRGUER
-// ==========================================
+
 
 const hamburguer4 =
     document.getElementById("hamburguer4");
@@ -262,24 +259,25 @@ const menuLateral4 =
     document.getElementById("menuLateral4");
 
 
-hamburguer4.addEventListener("click", function() {
+if (hamburguer4 && menuLateral4) {
 
-    if (menuLateral4.style.display === "block") {
+    hamburguer4.addEventListener("click", function() {
 
-        menuLateral4.style.display = "none";
+        if (menuLateral4.style.display === "block") {
 
-    } else {
+            menuLateral4.style.display = "none";
 
-        menuLateral4.style.display = "block";
+        } else {
 
-    }
+            menuLateral4.style.display = "block";
 
-});
+        }
+
+    });
+
+}
 
 
-// ==========================================
-// PARTE 4 - PESQUISA
-// ==========================================
 
 const campoPesquisa4 =
     document.getElementById("campoPesquisa4");
@@ -288,53 +286,56 @@ const botaoPesquisa4 =
     document.getElementById("botaoPesquisa4");
 
 
-botaoPesquisa4.addEventListener("click", function() {
+if (botaoPesquisa4 && campoPesquisa4) {
 
-    const pesquisa =
-        campoPesquisa4.value.trim();
+    botaoPesquisa4.addEventListener("click", function() {
 
-    if (pesquisa === "") {
+        const pesquisa =
+            campoPesquisa4.value.trim();
 
-        alert("Digite o nome de um filme!");
+        if (pesquisa === "") {
 
-    } else {
+            alert("Digite o nome de um filme!");
 
-        alert("Você pesquisou por: " + pesquisa);
+        } else {
 
-    }
+            alert("Você pesquisou por: " + pesquisa);
 
-});
+        }
 
-
-campoPesquisa4.addEventListener("keypress", function(event) {
-
-    if (event.key === "Enter") {
-
-        botaoPesquisa4.click();
-
-    }
-
-});
+    });
 
 
-// ==========================================
-// PARTE 4 - BOTÃO USUÁRIO
-// ==========================================
+    campoPesquisa4.addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+
+            botaoPesquisa4.click();
+
+        }
+
+    });
+
+}
+
+
+
 
 const botaoUsuario4 =
     document.getElementById("botaoUsuario4");
 
 
-botaoUsuario4.addEventListener("click", function() {
+if (botaoUsuario4) {
 
-    alert("Perfil do usuário");
+    botaoUsuario4.addEventListener("click", function() {
 
-});
+        alert("Perfil do usuário");
+
+    });
+
+}
 
 
-// ==========================================
-// PARTE 4 - SETAS
-// ==========================================
 
 const setasEsquerda4 =
     document.querySelectorAll("#telaParte4 .seta.esquerda");
@@ -369,9 +370,6 @@ setasDireita4.forEach(function(seta) {
 });
 
 
-// ==========================================
-// PARTE 4 - ITENS DO MENU
-// ==========================================
 
 const itensMenu4 =
     document.querySelectorAll("#menuLateral4 .menu-item");
@@ -384,16 +382,28 @@ itensMenu4.forEach(function(item) {
         const opcao =
             item.textContent.trim();
 
-        alert("Você selecionou: " + opcao);
+
+        if (
+            opcao.toLowerCase().includes("opinião") ||
+            opcao.toLowerCase().includes("opiniao") ||
+            opcao.toLowerCase().includes("opnião") ||
+            opcao.toLowerCase().includes("opniao")
+        ) {
+
+            abrirTelaOpiniao();
+
+        } else {
+
+            alert("Você selecionou: " + opcao);
+
+        }
 
     });
 
 });
 
 
-// ==========================================
-// PARTE 4 - FILMES → PARTE 5
-// ==========================================
+
 
 const filmesParte4 =
     document.querySelectorAll("#telaParte4 .filme");
@@ -405,14 +415,15 @@ filmesParte4.forEach(function(filme) {
 
         telaParte4.style.display = "none";
 
-        menuLateral4.style.display = "none";
+        if (menuLateral4) {
+            menuLateral4.style.display = "none";
+        }
 
         telaParte5.style.display = "block";
 
     });
 
 });
-
 
 
 
@@ -423,20 +434,23 @@ const menuLateral5 =
     document.getElementById("menuLateral5");
 
 
-hamburguer5.addEventListener("click", function() {
+if (hamburguer5 && menuLateral5) {
 
-    if (menuLateral5.style.display === "block") {
+    hamburguer5.addEventListener("click", function() {
 
-        menuLateral5.style.display = "none";
+        if (menuLateral5.style.display === "block") {
 
-    } else {
+            menuLateral5.style.display = "none";
 
-        menuLateral5.style.display = "block";
+        } else {
 
-    }
+            menuLateral5.style.display = "block";
 
-});
+        }
 
+    });
+
+}
 
 
 
@@ -447,33 +461,37 @@ const botaoPesquisa5 =
     document.getElementById("botaoPesquisa5");
 
 
-botaoPesquisa5.addEventListener("click", function() {
+if (botaoPesquisa5 && campoPesquisa5) {
 
-    const pesquisa =
-        campoPesquisa5.value.trim();
+    botaoPesquisa5.addEventListener("click", function() {
 
-    if (pesquisa === "") {
+        const pesquisa =
+            campoPesquisa5.value.trim();
 
-        alert("Digite o nome de um filme!");
+        if (pesquisa === "") {
 
-    } else {
+            alert("Digite o nome de um filme!");
 
-        alert("Você pesquisou por: " + pesquisa);
+        } else {
 
-    }
+            alert("Você pesquisou por: " + pesquisa);
 
-});
+        }
+
+    });
 
 
-campoPesquisa5.addEventListener("keypress", function(event) {
+    campoPesquisa5.addEventListener("keypress", function(event) {
 
-    if (event.key === "Enter") {
+        if (event.key === "Enter") {
 
-        botaoPesquisa5.click();
+            botaoPesquisa5.click();
 
-    }
+        }
 
-});
+    });
+
+}
 
 
 
@@ -481,12 +499,15 @@ const botaoUsuario5 =
     document.getElementById("botaoUsuario5");
 
 
-botaoUsuario5.addEventListener("click", function() {
+if (botaoUsuario5) {
 
-    alert("Perfil do usuário");
+    botaoUsuario5.addEventListener("click", function() {
 
-});
+        alert("Perfil do usuário");
 
+    });
+
+}
 
 
 
@@ -535,8 +556,259 @@ itensMenu5.forEach(function(item) {
         const opcao =
             item.textContent.trim();
 
-        alert("Você selecionou: " + opcao);
+
+        if (
+            opcao.toLowerCase().includes("opinião") ||
+            opcao.toLowerCase().includes("opiniao") ||
+            opcao.toLowerCase().includes("opnião") ||
+            opcao.toLowerCase().includes("opniao")
+        ) {
+
+            abrirTelaOpiniao();
+
+        } else {
+
+            alert("Você selecionou: " + opcao);
+
+        }
 
     });
 
 });
+
+
+
+
+let filmeAtual = "Ritmo Quente";
+
+
+
+
+const opinioes = {
+
+    "Ritmo Quente": [
+        {
+            usuario: "@aninha.123",
+            texto: "Adorei esse filme!"
+        },
+        {
+            usuario: "@joaozinho",
+            texto: "Muito bom, gostei bastante."
+        },
+        {
+            usuario: "@maria.filmes",
+            texto: "O romance ficou muito legal."
+        },
+        {
+            usuario: "@carlos123",
+            texto: "Com certeza assistiria novamente!"
+        }
+    ],
+
+    "Aventura Final": [
+        {
+            usuario: "@pedro.movie",
+            texto: "Foi muito emocionante."
+        },
+        {
+            usuario: "@jujuba",
+            texto: "Gostei muito da história."
+        },
+        {
+            usuario: "@filmes_da_ana",
+            texto: "Final surpreendente!"
+        }
+    ],
+
+    "Noite Sombria": [
+        {
+            usuario: "@darkmovie",
+            texto: "Muito suspense!"
+        },
+        {
+            usuario: "@biafilmes",
+            texto: "Gostei bastante."
+        },
+        {
+            usuario: "@gabi123",
+            texto: "O filme prende do começo ao fim."
+        }
+    ]
+
+};
+
+
+function abrirTelaOpiniao() {
+
+
+    if (telaLogin) {
+        telaLogin.style.display = "none";
+    }
+
+    if (telaUsuarios) {
+        telaUsuarios.style.display = "none";
+    }
+
+    if (telaInicio) {
+        telaInicio.style.display = "none";
+    }
+
+    if (telaParte4) {
+        telaParte4.style.display = "none";
+    }
+
+    if (telaParte5) {
+        telaParte5.style.display = "none";
+    }
+
+
+
+    if (menuLateral) {
+        menuLateral.style.display = "none";
+    }
+
+    if (menuLateral4) {
+        menuLateral4.style.display = "none";
+    }
+
+    if (menuLateral5) {
+        menuLateral5.style.display = "none";
+    }
+
+
+ 
+
+    if (telaOpiniao) {
+
+        telaOpiniao.style.display = "block";
+
+    }
+
+
+
+    const titulo =
+        document.querySelector("#telaOpiniao h1");
+
+
+    if (titulo) {
+
+        titulo.textContent =
+            "opnião sobre " + filmeAtual;
+
+    }
+
+
+    carregarOpinioes();
+
+}
+
+
+
+
+function carregarOpinioes() {
+
+    const container =
+        document.querySelector("#telaOpiniao .comentarios");
+
+
+    if (!container) {
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    const lista =
+        opinioes[filmeAtual] || [];
+
+
+    lista.forEach(function(opiniao) {
+
+        const comentario =
+            document.createElement("div");
+
+
+        comentario.classList.add("comentario");
+
+
+        comentario.innerHTML = `
+
+            <div class="foto-usuario">♙</div>
+
+            <div class="texto-comentario">
+
+                <span>${opiniao.usuario}</span>
+
+                <p>${opiniao.texto}</p>
+
+            </div>
+
+        `;
+
+
+        container.appendChild(comentario);
+
+    });
+
+}
+
+
+
+
+const campoComentario =
+    document.getElementById("campoComentario");
+
+
+if (campoComentario) {
+
+    campoComentario.addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+
+            const texto =
+                campoComentario.value.trim();
+
+
+            if (texto === "") {
+
+                return;
+
+            }
+
+
+        
+
+            if (!opinioes[filmeAtual]) {
+
+                opinioes[filmeAtual] = [];
+
+            }
+
+
+      
+
+            opinioes[filmeAtual].push({
+
+                usuario: "@voce",
+
+                texto: texto
+
+            });
+
+
+     
+
+            campoComentario.value = "";
+
+
+
+            carregarOpinioes();
+
+        }
+
+    });
+
+}
