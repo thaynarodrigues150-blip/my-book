@@ -1,30 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TelaX</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto+Condensed:wght@300;400&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
 
 
-<section id="telaListaDesejos" class="tela escondida">
+<body>
 
- 
 
-    <header class="cabecalho-lista">
 
-  
+<section id="telaLogin" class="tela">
+
+    <div class="logo login-logo">
+        <span class="play">▶</span>
+        <span>Tela</span><strong>X</strong>
+    </div>
+
+
+    <div class="caixa-login">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="digite seu email"
+        >
+
+        <input
+            type="password"
+            id="senha"
+            placeholder="digite sua senha..."
+        >
+
+        <button class="esqueci">
+            esqueceu sua senha?
+        </button>
+
+        <div class="linha"></div>
 
         <button
-            id="voltarListaDesejos"
-            class="seta-lista"
+            id="entrarGoogle"
+            class="google"
         >
-            ←
+            <span class="google-letra">G</span>
+            entrar com o google
+        </button>
+
+        <button
+            id="entrar"
+            class="botao-entrar"
+        >
+            entrar
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section
+    id="telaUsuarios"
+    class="tela escondida tela-usuario"
+>
+
+    <div class="logo usuario-logo">
+        <span class="play">▶</span>
+        <span>Tela</span><strong>X</strong>
+    </div>
+
+
+    <div class="usuario-area">
+
+        <div class="foto-usuario">
+            <div class="boneco">
+                <div class="cabeca"></div>
+                <div class="corpo"></div>
+            </div>
+        </div>
+
+
+        <button
+            id="novoUsuario"
+            class="botao-mais"
+        >
+            +
+        </button>
+
+    </div>
+
+
+    <h2 class="nome-usuario">
+        nome de usuario
+    </h2>
+
+</section>
+
+
+
+
+<section
+    id="telaInicio"
+    class="tela escondida tela-filmes"
+>
+
+    <header class="topo">
+
+        <button
+            id="perfilInicio"
+            class="perfil-pequeno"
+        >
+            <div class="boneco pequeno">
+                <div class="cabeca"></div>
+                <div class="corpo"></div>
+            </div>
         </button>
 
 
- 
+        <div class="logo logo-topo">
+            <span class="play">▶</span>
+            <span>Tela</span><strong>X</strong>
+        </div>
 
-        <h1>minha lista de desejos</h1>
 
+        <div class="pesquisa">
+
+            <input
+                type="text"
+                placeholder=""
+            >
+
+            <span>⌕</span>
+
+        </div>
 
 
         <button
-            id="hamburguerLista"
-            class="hamburguer-lista"
+            class="hamburguer"
+            data-menu
         >
             <span></span>
             <span></span>
@@ -34,63 +165,467 @@
     </header>
 
 
-   
-    <nav
-        id="menuListaDesejos"
-        class="menu-lista"
-    >
+    <main class="grade-filmes">
+
+        <button class="seta esquerda">‹</button>
+
+
+        <div class="filmes-grid">
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+            <div
+                class="cartaz"
+                data-filme="conjuring"
+            >
+                <img
+                    src="img/conjuring.jpg"
+                    alt="Invocação do Mal"
+                >
+            </div>
+
+        </div>
+
+
+        <button class="seta direita">›</button>
+
+    </main>
+
+</section>
+
+
+
+
+
+<section
+    id="telaGenero"
+    class="tela escondida tela-genero"
+>
+
+    <header class="topo">
 
         <button
-            id="fecharMenuLista"
-            class="fechar-menu-lista"
+            id="perfilGenero"
+            class="perfil-pequeno"
         >
-            ×
+            <div class="boneco pequeno">
+                <div class="cabeca"></div>
+                <div class="corpo"></div>
+            </div>
         </button>
 
 
-        <div class="opcoes-menu-lista">
+        <div class="logo logo-topo">
+            <span class="play">▶</span>
+            <span>Tela</span><strong>X</strong>
+        </div>
 
-            <button class="opcao-menu-lista">
-                Terror
-            </button>
 
-            <button class="opcao-menu-lista">
-                Romance
-            </button>
+        <div class="pesquisa">
 
-            <button class="opcao-menu-lista">
-                Ação
-            </button>
+            <input type="text">
 
-            <button class="opcao-menu-lista">
-                Suspense
-            </button>
+            <span>⌕</span>
 
-            <button class="opcao-menu-lista">
-                Lista de desejos
-            </button>
+        </div>
 
-            <button class="opcao-menu-lista">
-                Opinião sobre
-            </button>
 
-            <button class="opcao-menu-lista">
-                Configurações
+        <button
+            class="hamburguer"
+            data-menu
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <main class="grade-filmes">
+
+        <button class="seta esquerda">‹</button>
+
+
+        <div
+            id="filmesGenero"
+            class="filmes-grid"
+        >
+        </div>
+
+
+        <button class="seta direita">›</button>
+
+    </main>
+
+</section>
+
+
+<section
+    id="telaDetalhes"
+    class="tela escondida tela-detalhes"
+>
+
+    <button
+        id="voltarDetalhes"
+        class="seta-voltar"
+    >
+        ←
+    </button>
+
+
+    <button
+        class="hamburguer detalhes-menu"
+        data-menu
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <div class="detalhes-conteudo">
+
+        <div class="poster-detalhes">
+
+            <img
+                id="imagemDetalhes"
+                src="img/ritmoquente.jpg"
+                alt=""
+            >
+
+            <button class="assistir">
+                assistir
             </button>
 
         </div>
 
-    </nav>
 
-
-    
-
-    <main class="lista-filmes-desejos">
-
+        <div
+            id="textoDetalhes"
+            class="texto-detalhes"
+        >
+        </div>
 
 
         <div
-            class="filme-desejo"
+            id="sinopseDetalhes"
+            class="sinopse"
+        >
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section
+    id="telaOpiniao"
+    class="tela escondida tela-opiniao"
+>
+
+    <header class="topo-opiniao">
+
+        <button
+            id="voltarOpiniao"
+            class="seta-voltar"
+        >
+            ←
+        </button>
+
+
+        <h1>
+            opinião sobre...
+        </h1>
+
+
+        <button
+            class="hamburguer"
+            data-menu
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <div class="opiniao-principal">
+
+        <div class="comentarios">
+
+            <div class="comentario-vazio">
+                <div class="icone-pessoa">
+                    ♙
+                </div>
+            </div>
+
+            <div class="comentario-vazio">
+                <div class="icone-pessoa">
+                    ♙
+                </div>
+            </div>
+
+            <div class="comentario-vazio">
+                <div class="icone-pessoa">
+                    ♙
+                </div>
+            </div>
+
+            <div class="comentario-vazio">
+                <div class="icone-pessoa">
+                    ♙
+                </div>
+            </div>
+
+
+            <button
+                id="escreverOpiniao"
+                class="campo-opiniao"
+            >
+                escreva aqui sua opinião...
+            </button>
+
+        </div>
+
+
+        <div class="usuarios-opinioes">
+
+            <div>@aninha.123</div>
+            <div>@aninha.123</div>
+            <div>@aninha.123</div>
+            <div>@aninha.123</div>
+            <div>@aninha.123</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section
+    id="telaEscreverOpiniao"
+    class="tela escondida escrever-opiniao"
+>
+
+    <button
+        id="voltarEscreverOpiniao"
+        class="seta-voltar"
+    >
+        ←
+    </button>
+
+
+    <button
+        class="hamburguer"
+        data-menu
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <h1>
+        159 opiniões sobre o filme “Ritmo quente”
+    </h1>
+
+
+    <div class="linha-amarela"></div>
+
+
+    <div class="opiniao-filme">
+
+        <div class="area-texto-opiniao">
+
+            <span class="titulo-escrever">
+                escreva sua opinião
+            </span>
+
+
+            <div class="estrelas">
+                ☆ ☆ ☆ ☆ ☆
+            </div>
+
+
+            <p>
+                Ritmo Quente é aquele tipo de filme
+                que prende a atenção do começo ao
+                fim. Além de contar uma história de
+                amor bonita, ele mostra como a dança
+                pode aproximar pessoas de mundos
+                completamente diferentes. É um
+                filme leve, emocionante e que vale a
+                pena assistir.
+            </p>
+
+
+            <div class="estrelas">
+                ☆ ☆ ☆ ☆ ☆
+            </div>
+
+        </div>
+
+
+        <img
+            src="img/ritmoquente.jpg"
+            alt="Ritmo Quente"
+        >
+
+    </div>
+
+
+    <div class="caixa-novo-comentario">
+
+        <textarea
+            id="novoComentario"
+            placeholder="escreva aqui seu comentário..."
+        ></textarea>
+
+
+        <button id="enviarComentario">
+            enviar
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<section
+    id="telaListaDesejos"
+    class="tela escondida lista-desejos"
+>
+
+    <header class="cabecalho-lista">
+
+        <button
+            id="voltarLista"
+            class="seta-voltar"
+        >
+            ←
+        </button>
+
+
+        <h1>
+            minha lista de desejos
+        </h1>
+
+
+        <button
+            class="hamburguer"
+            data-menu
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <main class="lista-filmes">
+
+
+        <div
+            class="item-lista"
             data-filme="ritmo"
         >
 
@@ -99,8 +634,7 @@
                 alt="Ritmo Quente"
             >
 
-
-            <div class="informacoes-desejo">
+            <div>
 
                 <h2>
                     Ritmo Quente (1987)
@@ -115,10 +649,8 @@
         </div>
 
 
-        
-
         <div
-            class="filme-desejo"
+            class="item-lista"
             data-filme="maze"
         >
 
@@ -127,8 +659,7 @@
                 alt="Maze Runner"
             >
 
-
-            <div class="informacoes-desejo">
+            <div>
 
                 <h2>
                     Maze Runner: Correr ou Morrer (2014)
@@ -143,20 +674,17 @@
         </div>
 
 
-    
-
         <div
-            class="filme-desejo"
+            class="item-lista"
             data-filme="corra"
         >
 
             <img
-                src="img/getout.jpg"
+                src="https://pin.it/5GfD7cwTs"
                 alt="Corra!"
             >
 
-
-            <div class="informacoes-desejo">
+            <div>
 
                 <h2>
                     Corra! (2017)
@@ -171,10 +699,9 @@
         </div>
 
 
-
         <div
-            class="filme-desejo"
-            data-filme="conjuracao"
+            class="item-lista"
+            data-filme="conjuring"
         >
 
             <img
@@ -182,8 +709,7 @@
                 alt="Invocação do Mal"
             >
 
-
-            <div class="informacoes-desejo">
+            <div>
 
                 <h2>
                     Invocação do Mal (2013)
@@ -200,3 +726,80 @@
     </main>
 
 </section>
+
+<nav
+    id="menuLateral"
+    class="menu-lateral"
+>
+
+    <button
+        id="fecharMenu"
+        class="fechar-menu"
+    >
+        ×
+    </button>
+
+
+    <button
+        class="opcao-menu"
+        data-genero="terror"
+    >
+        Terror
+    </button>
+
+
+    <button
+        class="opcao-menu"
+        data-genero="romance"
+    >
+        Romance
+    </button>
+
+
+    <button
+        class="opcao-menu"
+        data-genero="acao"
+    >
+        Ação
+    </button>
+
+
+    <button
+        class="opcao-menu"
+        data-genero="suspense"
+    >
+        Suspense
+    </button>
+
+
+    <button
+        id="botaoLista"
+        class="opcao-menu"
+    >
+        Lista de desejos
+    </button>
+
+
+    <button
+        id="botaoOpiniao"
+        class="opcao-menu"
+    >
+        Opinião sobre
+    </button>
+
+
+    <button
+        class="opcao-menu"
+    >
+        Configurações
+    </button>
+
+</nav>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

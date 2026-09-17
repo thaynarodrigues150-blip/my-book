@@ -1,22 +1,43 @@
+* {
+    box-sizing: border-box;
+}
 
+html,
+body {
 
-#telaListaDesejos {
+    margin: 0;
+
+    padding: 0;
 
     width: 100%;
 
-    min-height: 100vh;
+    min-height: 100%;
 
-    background-color: #000000;
-
-    color: white;
-
-    position: relative;
-
-    box-sizing: border-box;
+    background: #000;
 
 }
 
+body {
 
+    font-family: "Roboto Condensed", Arial, sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+button {
+
+    font-family: inherit;
+
+}
+
+.tela {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+}
 
 .escondida {
 
@@ -27,88 +48,441 @@
 
 
 
-.cabecalho-lista {
+.logo {
 
-    width: 100%;
+    font-family: "Inknut Antiqua", serif;
 
-    height: 155px;
+    color: white;
 
-    position: relative;
+    font-size: 34px;
 
-    display: flex;
+}
 
-    align-items: center;
+.logo strong {
 
-    border-bottom: 4px solid #FFC300;
+    color: #FFC300;
 
-    box-sizing: border-box;
+}
+
+.play {
+
+    color: #D00000;
+
+    font-size: 30px;
+
+    margin-right: 3px;
 
 }
 
 
 
-.seta-lista {
+#telaLogin {
+
+    background: #001D3D;
+
+    border: 10px solid #D00000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+}
+
+.login-logo {
 
     position: absolute;
 
-    left: 15px;
+    top: 20px;
 
-    top: 5px;
+    right: 25px;
+
+}
+
+.caixa-login {
+
+    width: 270px;
+
+    height: 260px;
+
+    border: 10px solid #FFC300;
+
+    margin-top: 60px;
+
+    padding: 50px 42px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.caixa-login input {
+
+    width: 168px;
+
+    height: 29px;
+
+    margin-bottom: 20px;
+
+    background: #001D3D;
+
+    border: 3px solid #FFC300;
+
+    color: white;
+
+    padding: 5px;
+
+    font-size: 14px;
+
+}
+
+.caixa-login input::placeholder {
+
+    color: #FFC300;
+
+}
+
+.esqueci {
+
+    border: none;
 
     background: transparent;
+
+    color: #FFC300;
+
+    font-size: 9px;
+
+    margin-top: -18px;
+
+    margin-left: 85px;
+
+    white-space: nowrap;
+
+}
+
+.linha {
+
+    width: 190px;
+
+    border-top: 1px solid #FFC300;
+
+    margin: 24px 0 15px;
+
+}
+
+.google {
+
+    border: none;
+
+    background: transparent;
+
+    color: #FFC300;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+}
+
+.google-letra {
+
+    display: inline-block;
+
+    font-family: Arial;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-right: 15px;
+
+}
+
+.botao-entrar {
+
+    margin-top: 15px;
+
+    background: #D00000;
 
     border: none;
 
     color: white;
 
-    font-size: 55px;
-
-    font-family: Arial, sans-serif;
+    padding: 5px 30px;
 
     cursor: pointer;
 
-    padding: 0;
-
-}
-
-
-
-.cabecalho-lista h1 {
-
-    margin: 0;
-
-    margin-left: 80px;
-
-    margin-top: 10px;
-
-    color: #FFC300;
-
-    font-family: "Inknut Antiqua", serif;
-
-    font-size: 43px;
-
-    font-weight: normal;
-
 }
 
 
 
 
-.hamburguer-lista {
+.tela-usuario {
+
+    background: #001D3D;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.usuario-logo {
+
+    margin-top: 20px;
+
+}
+
+.usuario-area {
+
+    margin-top: 35px;
+
+    position: relative;
+
+    width: 230px;
+
+    height: 150px;
+
+}
+
+.foto-usuario {
+
+    width: 155px;
+
+    height: 155px;
+
+    border-radius: 50%;
+
+    background: #eee;
 
     position: absolute;
 
-    right: 20px;
+    left: 0;
 
-    top: 15px;
+    top: 0;
 
-    width: 60px;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.boneco {
+
+    width: 80px;
+
+    height: 90px;
+
+    position: relative;
+
+}
+
+.boneco .cabeca {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 8px solid #394957;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 19px;
+
+}
+
+.boneco .corpo {
+
+    width: 65px;
+
+    height: 42px;
+
+    border: 8px solid #394957;
+
+    border-bottom: 0;
+
+    border-radius: 45px 45px 0 0;
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 7px;
+
+}
+
+.botao-mais {
+
+    position: absolute;
+
+    right: 0;
+
+    top: 8px;
+
+    width: 135px;
+
+    height: 135px;
+
+    border: 7px solid #FFC300;
+
+    border-radius: 50%;
+
+    background: #001D3D;
+
+    color: white;
+
+    font-size: 55px;
+
+    cursor: pointer;
+
+}
+
+.nome-usuario {
+
+    color: white;
+
+    font-family: "Inknut Antiqua", serif;
+
+    font-size: 21px;
+
+    margin-top: 50px;
+
+}
+
+
+
+.topo {
 
     height: 55px;
 
+    background: #003566;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+}
+
+.perfil-pequeno {
+
+    width: 48px;
+
+    height: 48px;
+
+    background: white;
+
     border: none;
 
-    background-color: #003566;
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 5px;
+
+    top: 2px;
+
+    cursor: pointer;
+
+}
+
+.boneco.pequeno {
+
+    transform: scale(.48);
+
+    transform-origin: center;
+
+}
+
+.logo-topo {
+
+    margin-left: 75px;
+
+    font-size: 27px;
+
+}
+
+.logo-topo .play {
+
+    font-size: 23px;
+
+}
+
+.pesquisa {
+
+    position: absolute;
+
+    left: 32%;
+
+    width: 30%;
+
+    height: 30px;
+
+    background: white;
+
+    border: 2px solid #ccc;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.pesquisa input {
+
+    border: none;
+
+    outline: none;
+
+    width: 90%;
+
+    height: 100%;
+
+}
+
+.pesquisa span {
+
+    color: black;
+
+    font-size: 27px;
+
+}
+
+
+
+
+.hamburguer {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 5px;
+
+    width: 38px;
+
+    height: 40px;
+
+    background: #003566;
+
+    border: none;
 
     cursor: pointer;
 
@@ -118,24 +492,19 @@
 
     justify-content: center;
 
-    align-items: center;
+    gap: 5px;
 
-    gap: 6px;
+    z-index: 20;
 
 }
 
+.hamburguer span {
 
+    width: 30px;
 
+    height: 4px;
 
-.hamburguer-lista span {
-
-    display: block;
-
-    width: 38px;
-
-    height: 6px;
-
-    background-color: white;
+    background: white;
 
     border-radius: 3px;
 
@@ -144,21 +513,603 @@
 
 
 
-.lista-filmes-desejos {
+.tela-filmes,
+.tela-genero {
 
-    padding-top: 40px;
+    background: #003566;
 
-    padding-left: 80px;
+}
 
-    padding-bottom: 30px;
+.grade-filmes {
 
-    box-sizing: border-box;
+    position: relative;
+
+    width: 94%;
+
+    height: 320px;
+
+    margin: 20px auto;
+
+    background: #000;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.filmes-grid {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 20px 35px;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-template-rows: repeat(2, 1fr);
+
+    gap: 25px 35px;
+
+    overflow: hidden;
+
+}
+
+.cartaz {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+}
+
+.cartaz img {
+
+    width: 85px;
+
+    height: 125px;
+
+    object-fit: cover;
+
+}
+
+.seta {
+
+    position: absolute;
+
+    z-index: 5;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 60px;
+
+    cursor: pointer;
+
+}
+
+.esquerda {
+
+    left: -15px;
+
+}
+
+.direita {
+
+    right: -15px;
 
 }
 
 
 
-.filme-desejo {
+
+.menu-lateral {
+
+    position: fixed;
+
+    top: 0;
+
+    right: -230px;
+
+    width: 230px;
+
+    height: 100vh;
+
+    background: #808080;
+
+    z-index: 100;
+
+    padding-top: 45px;
+
+    transition: right .3s;
+
+}
+
+.menu-lateral.aberto {
+
+    right: 0;
+
+}
+
+.fechar-menu {
+
+    position: absolute;
+
+    right: 8px;
+
+    top: 3px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+}
+
+.opcao-menu {
+
+    width: 200px;
+
+    min-height: 35px;
+
+    margin: 5px auto;
+
+    display: block;
+
+    background: #e5e5e5;
+
+    border: none;
+
+    font-family: "Inknut Antiqua", serif;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+}
+
+.opcao-menu:hover {
+
+    background: #FFC300;
+
+}
+
+
+
+
+.tela-detalhes {
+
+    background: #000;
+
+    color: white;
+
+    position: relative;
+
+}
+
+.seta-voltar {
+
+    position: absolute;
+
+    left: 5px;
+
+    top: 0;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+}
+
+.detalhes-menu {
+
+    background: #003566;
+
+}
+
+.detalhes-conteudo {
+
+    padding-top: 30px;
+
+}
+
+.poster-detalhes {
+
+    width: 40%;
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    vertical-align: top;
+
+}
+
+.poster-detalhes img {
+
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: contain;
+
+    object-position: left;
+
+}
+
+.assistir {
+
+    background: #D00000;
+
+    color: white;
+
+    border: none;
+
+    padding: 4px 18px;
+
+    margin: 25px 0 0 5px;
+
+    width: fit-content;
+
+    cursor: pointer;
+
+}
+
+.texto-detalhes {
+
+    width: 58%;
+
+    display: inline-block;
+
+    vertical-align: top;
+
+    border-left: 2px solid #FFC300;
+
+    padding-left: 10px;
+
+    font-size: 15px;
+
+    line-height: 1.3;
+
+}
+
+.sinopse {
+
+    width: 100%;
+
+    padding: 25px 5px;
+
+    font-size: 15px;
+
+    line-height: 1.45;
+
+}
+
+
+
+.tela-opiniao {
+
+    background: #000;
+
+    color: white;
+
+}
+
+.topo-opiniao {
+
+    height: 70px;
+
+    border-bottom: 3px solid #D00000;
+
+    position: relative;
+
+}
+
+.topo-opiniao h1 {
+
+    margin: 0;
+
+    padding: 5px 0 0 35px;
+
+    color: #FFC300;
+
+    font-family: "Inknut Antiqua", serif;
+
+    font-size: 35px;
+
+    font-weight: normal;
+
+}
+
+.opiniao-principal {
+
+    display: flex;
+
+    gap: 25px;
+
+    padding: 25px;
+
+}
+
+.comentarios {
+
+    width: 75%;
+
+    background: #003566;
+
+    padding: 8px;
+
+}
+
+.comentario-vazio {
+
+    height: 45px;
+
+    border-bottom: 3px solid #D00000;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.icone-pessoa {
+
+    background: #eee;
+
+    color: #394957;
+
+    width: 40px;
+
+    height: 35px;
+
+    font-size: 27px;
+
+    text-align: center;
+
+}
+
+.campo-opiniao {
+
+    margin-top: 25px;
+
+    width: 80%;
+
+    height: 27px;
+
+    background: #eee;
+
+    border: none;
+
+    color: #777;
+
+    text-align: left;
+
+    padding-left: 15px;
+
+    font-family: "Inknut Antiqua", serif;
+
+    cursor: text;
+
+}
+
+.usuarios-opinioes {
+
+    width: 22%;
+
+    background: #003566;
+
+}
+
+.usuarios-opinioes div {
+
+    height: 48px;
+
+    border-bottom: 3px solid #D00000;
+
+    padding: 12px;
+
+    color: black;
+
+    background: #8eb1d3;
+
+}
+
+
+
+.escrever-opiniao {
+
+    background: #000;
+
+    color: white;
+
+    position: relative;
+
+    padding-top: 45px;
+
+}
+
+.escrever-opiniao h1 {
+
+    font-size: 27px;
+
+    font-weight: normal;
+
+    margin: 0 15px;
+
+}
+
+.linha-amarela {
+
+    width: 100%;
+
+    border-top: 2px solid #FFC300;
+
+    margin-top: 10px;
+
+}
+
+.opiniao-filme {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 15px;
+
+}
+
+.area-texto-opiniao {
+
+    width: 48%;
+
+}
+
+.titulo-escrever {
+
+    background: #D00000;
+
+    padding: 3px 8px;
+
+}
+
+.estrelas {
+
+    font-size: 34px;
+
+    color: #ccc;
+
+    margin: 8px 0;
+
+}
+
+.area-texto-opiniao p {
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    margin: 0;
+
+}
+
+.opiniao-filme img {
+
+    width: 205px;
+
+    height: 305px;
+
+    object-fit: cover;
+
+}
+
+.caixa-novo-comentario {
+
+    padding: 10px 15px;
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.caixa-novo-comentario textarea {
+
+    width: 70%;
+
+    height: 70px;
+
+    resize: none;
+
+    font-family: inherit;
+
+    padding: 8px;
+
+}
+
+.caixa-novo-comentario button {
+
+    background: #D00000;
+
+    border: none;
+
+    color: white;
+
+    height: 30px;
+
+    padding: 0 20px;
+
+}
+
+
+
+
+.lista-desejos {
+
+    background: #000;
+
+    color: white;
+
+    min-height: 100vh;
+
+}
+
+.cabecalho-lista {
+
+    height: 155px;
+
+    border-bottom: 4px solid #FFC300;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.cabecalho-lista h1 {
+
+    color: #FFC300;
+
+    font-family: "Inknut Antiqua", serif;
+
+    font-weight: normal;
+
+    font-size: 42px;
+
+    margin-left: 80px;
+
+}
+
+.lista-filmes {
+
+    padding: 40px 80px;
+
+}
+
+.item-lista {
 
     display: flex;
 
@@ -168,10 +1119,11 @@
 
     margin-bottom: 25px;
 
+    cursor: pointer;
+
 }
 
-
-.filme-desejo img {
+.item-lista img {
 
     width: 125px;
 
@@ -179,152 +1131,104 @@
 
     object-fit: cover;
 
-    display: block;
-
-    cursor: pointer;
-
 }
 
-
-
-
-.informacoes-desejo {
+.item-lista div {
 
     margin-left: 45px;
 
 }
 
-
-.informacoes-desejo h2 {
-
-    margin: 0 0 5px 0;
-
-    color: white;
+.item-lista h2 {
 
     font-family: "Inknut Antiqua", serif;
 
+    font-weight: normal;
+
     font-size: 25px;
 
-    font-weight: normal;
+    margin: 0 0 5px;
 
 }
 
-
-.informacoes-desejo p {
-
-    margin: 0;
-
-    color: white;
+.item-lista p {
 
     font-family: "Inknut Antiqua", serif;
 
     font-size: 20px;
 
-}
-
-
-.menu-lista {
-
-    position: fixed;
-
-    top: 0;
-
-    right: -240px;
-
-    width: 220px;
-
-    height: 100vh;
-
-    background-color: #808080;
-
-    z-index: 9999;
-
-    padding-top: 55px;
-
-    box-sizing: border-box;
-
-    transition: right 0.3s ease;
+    margin: 0;
 
 }
 
 
 
+@media (max-width: 700px) {
 
-.menu-lista.aberto {
+    .filmes-grid {
 
-    right: 0;
+        grid-template-columns: repeat(5, 1fr);
 
-}
+        gap: 15px;
 
+        padding: 20px 25px;
 
+    }
 
+    .cartaz img {
 
-.fechar-menu-lista {
+        width: 70px;
 
-    position: absolute;
+        height: 115px;
 
-    top: 5px;
+    }
 
-    right: 8px;
+    .logo-topo {
 
-    background: transparent;
+        margin-left: 60px;
 
-    border: none;
+        font-size: 22px;
 
-    color: black;
+    }
 
-    font-size: 35px;
+    .pesquisa {
 
-    cursor: pointer;
+        left: 30%;
 
-}
+        width: 32%;
 
+    }
 
+    .cabecalho-lista h1 {
 
-.opcoes-menu-lista {
+        font-size: 28px;
 
-    width: 100%;
+        margin-left: 55px;
 
-    display: flex;
+    }
 
-    flex-direction: column;
+    .lista-filmes {
 
-    align-items: center;
+        padding: 25px;
 
-}
+    }
 
+    .item-lista div {
 
+        margin-left: 20px;
 
+    }
 
-.opcao-menu-lista {
+    .item-lista h2 {
 
-    width: 200px;
+        font-size: 17px;
 
-    min-height: 35px;
+    }
 
-    margin-bottom: 10px;
+    .item-lista p {
 
-    padding: 3px;
+        font-size: 14px;
 
-    background-color: #E5E5E5;
-
-    border: none;
-
-    color: black;
-
-    font-family: "Inknut Antiqua", serif;
-
-    font-size: 19px;
-
-    cursor: pointer;
-
-}
-
-
-
-
-.opcao-menu-lista:hover {
-
-    background-color: #FFC300;
+    }
 
 }
